@@ -1,0 +1,10 @@
+<br />
+<b>Fatal error</b>:  Uncaught exception 'DBException' with message '[IBM][CLI Driver][DB2/LINUXX8664] SQL0723N  An error occurred in a triggered SQL statement in trigger &quot;DOCUMENT.WAREHOUSEPAYMEN&quot;.  Information returned for the error includes SQLCODE &quot;-407&quot;, SQLSTATE &quot;23502&quot; and message tokens &quot;TBSPACEID=7, TABLEID=4023, COLNO=6&quot;.  SQLSTATE=09000, CALL NET.SET_CONTACT_PAYMENT2(?, ?, ?, ?, ?, ?, ?)
+NULL, 'VISA', '27.9500000', 'BANKART', '429358', NULL, NULL' in /var/sitexo-lumina/maindb.php:99
+Stack trace:
+#0 /var/sitexo-lumina/maindb.php(761): MainDb-&gt;db2execute('CALL NET.SET_CO...', Array, 1)
+#1 /var/sitexo-lumina/Cart.php(272): MainDb-&gt;setPayment('VISA', '27.9500000', NULL, 'BANKART', '429358', NULL)
+#2 /var/sitexo-lumina/app.php(849): Cart-&gt;setPayment('VISA', '27.9500000', NULL, 'BANKART', '429358', NULL)
+#3 /var/www2/tpl.cart.v2.php(29): App-&gt;cartSetPayment('VISA', '27.9500000', NULL, 'BANKART', '429358', NULL)
+#4 /var/www2/tpl.page2.php(51): include('/var/www2/tpl.c...')
+#5 /var/si/index.php(67): include('/var/www2/tpl.p...' in <b>/var/sitexo-lumina/maindb.php</b> on line <b>99</b><br />

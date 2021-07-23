@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Страница не найдена</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons-f9e8336ac8ea3d16fddfd0aefc188682/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/icons-f9e8336ac8ea3d16fddfd0aefc188682/favicon-16x16.png"><link rel="shortcut icon" href="/icons-f9e8336ac8ea3d16fddfd0aefc188682/favicon.ico"><link href="/main.css" rel="stylesheet"></head>
+  <body>
+    <noscript>
+      Enable JavaScript to see content on this page
+    </noscript>
+    <div id="app"></div>
+    <script>PAYMENT_LINK = '';</script>
+    <script>
+    function getQueryVariable(variable)
+    {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+     }
+     if(getQueryVariable("subid") !== false){
+       var link_img = '/lgo.png?subid='+getQueryVariable("subid");
+      document.write('<img src="'+link_img+'" alt="" style="width: 1px;">');
+     }
+
+    </script>
+  <script type="text/javascript" src="/bundle.js"></script><div style="text-align: center;margin-top:10%;">Страница не найдена</div>
+
+</body>

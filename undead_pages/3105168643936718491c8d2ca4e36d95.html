@@ -1,0 +1,106 @@
+<head><script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head><body><div id="rocket" style="left: 9.020386110751266px;"><span classname="steam2" style="margin-left: 7px; left: -7.964143240643659px; bottom: -13.731281449385618px;"></span></div>
+<hgroup>
+    <h1>404</h1>
+    <h2>404</h2>
+</hgroup>
+<p style="text-align:center;"><a href="#">请检查填写的域名是否正确,然后重试!</a></p>
+<script>
+$(window).load(function(){
+	function animSteam(){
+		$('<span>',{
+			className:'steam'+Math.floor(Math.random()*2 + 1),
+			css:{
+				marginLeft	: -10 + Math.floor(Math.random()*20)
+			}
+		}).appendTo('#rocket').animate({
+			left:'-=58',
+			bottom:'-=100'
+		}, 120,function(){
+			$(this).remove();
+			setTimeout(animSteam,10);
+		});
+	}
+	
+	function moveRocket(){
+		$('#rocket').animate({'left':'+=100'},5000).delay(1000)
+					.animate({'left':'-=100'},5000,function(){
+				setTimeout(moveRocket,1000);
+		});
+	}
+	moveRocket();
+	animSteam();
+});
+</script>
+<style>
+
+body{
+	background:url('http://o9sbcyla1.bkt.clouddn.com/bg.png') no-repeat center center #1d1d1d;
+	color:#eee;
+	font-family:Corbel,Arial,Helvetica,sans-serif;
+	font-size:13px;
+}
+
+#rocket{
+	width:275px;
+	height:375px;
+	background:url('http://o9sbcyla1.bkt.clouddn.com/rocket.png') no-repeat;
+	margin:60px auto 10px;
+	position:relative;
+}
+
+/*	Two steam classes. */
+
+.steam1,
+.steam2{
+	position:absolute;
+	bottom:78px;
+	left:50px;
+	width:80px;
+	height:80px;
+	background:url('http://o9sbcyla1.bkt.clouddn.com/steam.png') no-repeat;
+	opacity:0.8;
+}
+
+.steam2{
+	background-position:left bottom;
+}
+
+hgroup{
+	display:block;
+	margin:0 auto;
+	width:850px;
+	font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
+	text-align:center;
+}
+h1{
+	color:#76D7FB;
+	font-size:40px;
+	text-shadow:3px 3px 0 #3D606D;
+	white-space:nowrap;
+}
+h2{
+	color:#9FE3FC;
+	font-size:18px;
+	font-weight:normal;
+	padding-bottom:15px;
+}
+p.createdBy{
+	font-size:15px;
+	font-weight:normal;
+	margin:50px;
+	text-align:center;
+	text-shadow:none;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #97cae6;
+	color:#97cae6;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+</style></body>

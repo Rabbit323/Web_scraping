@@ -1,0 +1,11 @@
+<br />
+<b>Fatal error</b>:  Uncaught InvalidArgumentException: The '' is as invalid integer. in /data/var/www/html/minhamicron/src/MinhaMicron/DataAccess/DAO/MySQL/MySQLAdesaoDAO.php:49
+Stack trace:
+#0 /data/var/www/html/minhamicron/src/MinhaMicron/Controllers/Roteador/SenhasRoteadorController.php(20): MinhaMicron\DataAccess\DAO\MySQL\MySQLAdesaoDAO-&gt;getByIdCliente(NULL)
+#1 [internal function]: MinhaMicron\Controllers\Roteador\SenhasRoteadorController-&gt;get(Array)
+#2 /data/var/www/html/minhamicron/vendor/respect/rest/library/Respect/Rest/Routes/ClassName.php(110): call_user_func_array(Array, Array)
+#3 /data/var/www/html/minhamicron/vendor/respect/rest/library/Respect/Rest/Request.php(236): Respect\Rest\Routes\ClassName-&gt;runTarget('GET', Array)
+#4 /data/var/www/html/minhamicron/vendor/respect/rest/library/Respect/Rest/Router.php(571): Respect\Rest\Request-&gt;response()
+#5 /data/var/www/html/minhamicron/public/index.php(75): Respect\Rest\Router-&gt;run()
+#6 {main}
+  thrown in <b>/data/var/www/html/minhamicron/src/MinhaMicron/DataAccess/DAO/MySQL/MySQLAdesaoDAO.php</b> on line <b>49</b><br />
